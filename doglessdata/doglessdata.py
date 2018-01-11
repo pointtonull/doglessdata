@@ -196,7 +196,7 @@ class DataDogMetrics(object):
 
         timestamp = int(time.time())
 
-        metric_name = "codex.lambda." + service_name
+        metric_name = "lambda." + service_name
         metric_name = metric_name.replace("..", ".")
         tags = self._get_tags(tags, service_name)
         tags = ",".join(tags)
@@ -216,7 +216,7 @@ class DataDogMetrics(object):
 
 
     def _print_metric(self, metric_type, metric_name, value, tags_list):
-        metric_name = "codex.lambda." + metric_name
+        metric_name = "lambda." + metric_name
         metric_name = metric_name.replace("..", ".")
         timestamp = int(time.time())
         tags = ",".join(tags_list)
