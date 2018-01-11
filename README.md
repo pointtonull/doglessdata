@@ -1,2 +1,3 @@
-# dogless
-Agentless implementation for Datadog. Works as a charm for AWS Lambda.
+# DoglessData
+
+Agentless implementation for Datadog. Works like a charm with AWS Lambda.
