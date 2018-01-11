@@ -53,8 +53,7 @@ class DataDogMetrics(object):
         default_tags.append("h:%s" % lambda_name)
         default_tags.append("host:%s" % lambda_name)
         default_tags.append("stack:%s" % stack)
-        default_tags.append("codex")
-        default_tags.append("codex.lambda")
+        default_tags.append("lambda")
 
         aws_region = os.environ.get('AWS_REGION', "")
         if aws_region:
