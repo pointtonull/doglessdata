@@ -1,3 +1,6 @@
 __all__ = ["DataDogMetrics"]
 
-from doglessdata import DataDogMetrics
+try:
+    from doglessdata import DataDogMetrics
+except ImportError:
+    from .doglessdata import DataDogMetrics
