@@ -4,8 +4,8 @@ setup(
     # Application name:
     name="DoglessData",
 
-    # Version number (initial):
-    version="0.1.0",
+    # Version number:
+    version="0.1.1",
 
     # Application author details:
     author="Carlos M. Cabrera",
