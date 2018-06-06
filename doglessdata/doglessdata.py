@@ -32,7 +32,7 @@ class DataDogMetrics(object):
     UNKNOWN   =  3
 
 
-    def __init__(self):
+    def __init__(self, global_tags=[]):
         """
         """
 
@@ -45,11 +45,11 @@ class DataDogMetrics(object):
                 stack = match["stack"]
             else:
                 stack = "no_stack"
-                print("failed to match lambda_name: %s" % lambda_name)
+#                 print("failed to match lambda_name: %s" % lambda_name)
         else:
             stack = "no_stack"
 
-        default_tags = []
+        default_tags = [] + global_tags
         default_tags.append("h:%s" % lambda_name)
         default_tags.append("host:%s" % lambda_name)
         default_tags.append("stack:%s" % stack)
